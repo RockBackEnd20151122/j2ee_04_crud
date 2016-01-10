@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+form div
+{
+	height:30px;
+}
+form span
+{
+	display:inline-block;
+	width:80px;	
+}
+
+.deleteSelected
+{
+	cursor:pointer;
+}
