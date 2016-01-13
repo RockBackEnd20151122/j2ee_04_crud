@@ -16,8 +16,8 @@
 		for (int i = 0; listStudent != null && i < listStudent.size(); i++) {
 			Student student = listStudent.get(i);
 			str += String.format(
-					"<tr>\n\t<td>%s</td>\n\t<td>%s</td>\n\t<td>%d</td>\n\t<td>%s</td>\n\t<td><a href='StudentServlet?router=delete&id=%s'>delete</a><input type='checkbox' name='checkboxid' value='%s' /></td></tr>\n",
-					student.getId(), student.getName(), student.getAge(), student.getAddress(), student.getId(), student.getId());
+					"<tr>\n\t<td>%s</td>\n\t<td>%s</td>\n\t<td>%d</td>\n\t<td>%s</td>\n\t<td><a href='StudentServlet?router=delete&id=%s'>delete</a><input type='checkbox' name='checkboxid' value='%s' /></td><td><a href='StudentServlet?router=modify&id=%s'>update</a></td></tr>\n",
+					student.getId(), student.getName(), student.getAge(), student.getAddress(), student.getId(), student.getId(), student.getId());
 		}
 	%>
 	<table>
@@ -27,6 +27,7 @@
 			<td>age</td>
 			<td>address</td>
 			<td>operation</td>
+			<td>update</td>
 		</tr>
 		<%=str%>
 	</table>

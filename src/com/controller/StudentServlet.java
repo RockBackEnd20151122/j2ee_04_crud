@@ -88,7 +88,11 @@ public class StudentServlet extends HttpServlet {
 		}
 			break;
 		case "modify": {
-
+			StudentDal dal = new StudentDal();
+//			dal.update(student);
+			
+			request.setAttribute("studentId", id );
+			request.getRequestDispatcher("/update.jsp").forward(request,response);
 		}
 			break;
 		case "listall": {

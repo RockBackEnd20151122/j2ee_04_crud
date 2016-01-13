@@ -24,6 +24,11 @@ public class StudentDal {
 	}
 	public int update(Student student)
 	{
+		//UPDATE student t set age=7 where t.id in ('01','2') and t.name='1';
+		String sql=String.format("update student t set age=?, name=?, address=? where t.id=\"%s\"", student.getAge(), student.getName(), student.getAddress(), student.getId() );
+		
+		MysqlHelper mysqlHelper = new MysqlHelper();
+		mysqlHelper.excute(sql);
 		return 1;
 	}
 	public Student findById(Student student)

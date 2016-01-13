@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>jsp_learning</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>registerServlet</servlet-name>
+		<servlet-class>user.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>registerServlet</servlet-name>
+		<url-pattern>/registerAction</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>queryServlet</servlet-name>
+		<servlet-class>user.QueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>queryServlet</servlet-name>
+		<url-pattern>/queryAction</url-pattern>
+	</servlet-mapping>
+	
+		
+	<servlet>
+		<servlet-name>deleteServlet</servlet-name>
+		<servlet-class>user.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteServlet</servlet-name>
+		<url-pattern>/deleteAction</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>queryForUpdateServlet</servlet-name>
+		<servlet-class>user.QueryForUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>queryForUpdateServlet</servlet-name>
+		<url-pattern>/queryForUpdateAction</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>saveServlet</servlet-name>
+		<servlet-class>user.SaveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>saveServlet</servlet-name>
+		<url-pattern>/saveAction</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
